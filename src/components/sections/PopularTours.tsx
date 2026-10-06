@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { packages } from "@/data/packages";
 import { Star, Clock, Users } from "lucide-react";
 import { Reveal } from "../Reveal";
@@ -38,10 +39,12 @@ export function PopularTours() {
               style={{ transitionDelay: `${i * 100}ms` }}
             >
               <div className="img-zoom relative aspect-4/5">
-                <img
+                <Image
                   src={t.cover.src}
                   alt={t.title}
-                  className="absolute inset-0 w-full h-full object-cover"
+                  fill
+                  sizes="(max-width: 768px) 100vw, (max-width: 1280px) 33vw, 453px"
+                  className="object-cover"
                   loading="lazy"
                 />
                 <div className="absolute inset-0 bg-linear-to-t from-primary/80 via-transparent to-transparent" />

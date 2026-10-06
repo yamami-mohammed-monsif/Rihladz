@@ -4,6 +4,7 @@ import { useRef, useState } from "react";
 import { ArrowLeft, ArrowRight } from "lucide-react";
 import { packages } from "@/data/packages";
 import Link from "next/link";
+import Image from "next/image";
 import { Reveal } from "../Reveal";
 
 const ANIM_MS = 700;
@@ -102,11 +103,13 @@ export function Destinations() {
                       onClick={() => jumpTo(realIdx)}
                       className="group text-left cursor-pointer"
                     >
-                      <div className="img-zoom rounded-2xl overflow-hidden aspect-4/5">
-                        <img
+                      <div className="img-zoom rounded-2xl overflow-hidden aspect-4/5 relative">
+                        <Image
                           src={t.cover.src}
                           alt={t.title}
-                          className="w-full h-full object-cover"
+                          fill
+                          sizes="(max-width: 1024px) 0px, 12vw"
+                          className="object-cover"
                           loading="lazy"
                         />
                       </div>
@@ -157,10 +160,13 @@ export function Destinations() {
                         className="relative mx-auto rounded-[50%] overflow-hidden shadow-[0_20px_80px_-20px_rgba(10,37,64,0.45)]"
                         style={{ aspectRatio: "4/5", maxWidth: 480 }}
                       >
-                        <img
+                        <Image
                           src={items[leaving.idx].cover.src}
                           alt=""
-                          className="w-full h-full object-cover"
+                          fill
+                          sizes="(max-width: 768px) 90vw, 480px"
+                          className="object-cover"
+                          priority={false}
                         />
                       </div>
                       <div className="mt-8 flex items-end justify-between gap-4">
@@ -195,10 +201,13 @@ export function Destinations() {
                       className="relative mx-auto rounded-[50%] overflow-hidden img-zoom shadow-[0_20px_80px_-20px_rgba(10,37,64,0.45)]"
                       style={{ aspectRatio: "4/5", maxWidth: 480 }}
                     >
-                      <img
+                      <Image
                         src={active.cover.src}
                         alt={active.title}
-                        className="w-full h-full object-cover"
+                        fill
+                        sizes="(max-width: 768px) 90vw, 480px"
+                        className="object-cover"
+                        priority
                       />
                     </div>
                     <div className="mt-8 flex items-end justify-between gap-4">
@@ -248,11 +257,13 @@ export function Destinations() {
                       onClick={() => jumpTo(realIdx)}
                       className="group text-left cursor-pointer"
                     >
-                      <div className="img-zoom rounded-2xl overflow-hidden aspect-4/5">
-                        <img
+                      <div className="img-zoom rounded-2xl overflow-hidden aspect-4/5 relative">
+                        <Image
                           src={t.cover.src}
                           alt={t.title}
-                          className="w-full h-full object-cover"
+                          fill
+                          sizes="(max-width: 1024px) 0px, 12vw"
+                          className="object-cover"
                           loading="lazy"
                         />
                       </div>

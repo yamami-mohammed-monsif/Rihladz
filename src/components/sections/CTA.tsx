@@ -1,5 +1,6 @@
-import cta from "@/public/assets/cta-guide.jpg";
+import cta from "@/public/assets/cta-guide.webp";
 import Link from "next/link";
+import Image from "next/image";
 import { Reveal } from "../Reveal";
 
 export function CTA() {
@@ -8,10 +9,12 @@ export function CTA() {
       <div className="mx-auto max-w-7xl px-6 lg:px-10">
         <Reveal>
           <div className="relative rounded-[2.5rem] overflow-hidden">
-            <img
-              src={cta.src}
+            <Image
+              src={cta}
               alt=""
-              className="absolute inset-0 w-full h-full object-cover"
+              fill
+              sizes="(max-width: 768px) 100vw, (max-width: 1280px) 90vw, 1280px"
+              className="object-cover"
               loading="lazy"
             />
             <div className="absolute inset-0 bg-linear-to-r from-primary via-primary/80 to-primary/30" />

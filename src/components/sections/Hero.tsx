@@ -1,6 +1,6 @@
 "use client";
 
-import hero from "@/public/assets/hero-sahara.jpg";
+import hero from "@/public/assets/hero-sahara.webp";
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";

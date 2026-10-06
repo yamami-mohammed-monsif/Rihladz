@@ -1,13 +1,13 @@
-import tassili from "@/public/assets/dest-tassili.jpg";
-import algiers from "@/public/assets/dest-algiers.jpg";
-import constantine from "@/public/assets/dest-constantine.jpg";
-import djemila from "@/public/assets/dest-djemila.jpg";
-import ghardaia from "@/public/assets/dest-ghardaia.jpg";
-import tipaza from "@/public/assets/dest-tipaza.jpg";
+import tassili from "@/public/assets/dest-tassili.webp";
+import algiers from "@/public/assets/dest-algiers.webp";
+import constantine from "@/public/assets/dest-constantine.webp";
+import djemila from "@/public/assets/dest-djemila.webp";
+import ghardaia from "@/public/assets/dest-ghardaia.webp";
+import tipaza from "@/public/assets/dest-tipaza.webp";
 import camel from "@/public/assets/tour-camel.jpg";
-import culture from "@/public/assets/tour-culture.jpg";
+import culture from "@/public/assets/tour-culture.webp";
 import coast from "@/public/assets/tour-coast.jpg";
-import hoggar from "@/public/assets/tour-hoggar.jpg";
+import hoggar from "@/public/assets/tour-hoggar.webp";
 
 import { StaticImageData } from "next/image";
 

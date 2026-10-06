@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { ChevronDown } from "lucide-react";
-import faqImg from "@/public/assets/faq-mountains.jpg";
+import faqImg from "@/public/assets/faq-mountains.webp";
 import { Reveal } from "../Reveal";
 
 const defaultFaqs = [

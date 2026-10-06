@@ -1,6 +1,7 @@
 import { Compass, Heart, ShieldCheck, Sparkles } from "lucide-react";
-import culture from "@/public/assets/tour-culture.jpg";
+import culture from "@/public/assets/tour-culture.webp";
 import { Reveal } from "../Reveal";
+import Image from "next/image";
 
 const items = [
   {
@@ -33,14 +34,17 @@ export function WhyUs() {
         <div className="grid lg:grid-cols-12 gap-14 items-center">
           <div className="lg:col-span-5">
             <Reveal>
-              <div className="img-zoom rounded-3xl overflow-hidden">
-                <img
-                  src={culture.src}
+              <Reveal>
+                <Image
+                  src={culture}
                   alt="Algerian tea ceremony"
-                  className="w-full aspect-4/5 object-cover"
+                  fill
+                  sizes="(max-width: 1024px) 100vw, 40vw"
+                  className="object-cover"
                   loading="lazy"
+                  placeholder="blur"
                 />
-              </div>
+              </Reveal>
             </Reveal>
             <Reveal>
               <div className="mt-6 grid grid-cols-3 gap-4">
