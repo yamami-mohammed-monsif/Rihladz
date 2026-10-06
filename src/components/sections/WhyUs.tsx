@@ -34,7 +34,7 @@ export function WhyUs() {
         <div className="grid lg:grid-cols-12 gap-14 items-center">
           <div className="lg:col-span-5">
             <Reveal>
-              <Reveal>
+              <div className="img-zoom rounded-3xl overflow-hidden relative aspect-4/5">
                 <Image
                   src={culture}
                   alt="Algerian tea ceremony"
@@ -44,7 +44,7 @@ export function WhyUs() {
                   loading="lazy"
                   placeholder="blur"
                 />
-              </Reveal>
+              </div>
             </Reveal>
             <Reveal>
               <div className="mt-6 grid grid-cols-3 gap-4">
