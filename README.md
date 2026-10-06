@@ -2,7 +2,7 @@
 
 A modern travel and tourism website concept for discovering Algeria through curated destinations, tours, and locally rooted travel experiences.
 
-**Live Demo:** Add your Vercel URL here  
+**Live Demo:** https://rihladz.vercel.app/  
 **Repository:** https://github.com/yamami-mohammed-monsif/Rihladz
 
 ## Overview
