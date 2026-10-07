@@ -43,12 +43,12 @@ export function CTA() {
                     →
                   </span>
                 </Link>
-                <Link
+                {/* <Link
                   href="/destinations"
                   className="text-primary-foreground/90 hover:text-secondary px-4 py-3 underline-offset-8 hover:underline"
                 >
                   Browse all packages
-                </Link>
+                </Link> */}
               </div>
             </div>
           </div>
