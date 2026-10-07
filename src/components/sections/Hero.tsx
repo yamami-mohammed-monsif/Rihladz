@@ -61,17 +61,17 @@ export function Hero() {
             href="/destinations"
             className="group inline-flex items-center gap-3 bg-accent text-accent-foreground pl-7 pr-2 py-2 rounded-full font-medium hover:scale-[1.03] transition-transform"
           >
-            Plan my journey
+            Find my journey
             <span className="grid place-items-center w-11 h-11 rounded-full bg-primary text-primary-foreground group-hover:-rotate-45 transition-transform">
               →
             </span>
           </Link>
-          <Link
+          {/* <Link
             href="/about"
             className="text-primary-foreground hover:text-accent transition-colors px-4 py-3 underline-offset-8 hover:underline"
           >
             How we travel
-          </Link>
+          </Link> */}
         </div>
 
         {/* Trust signals bar */}
