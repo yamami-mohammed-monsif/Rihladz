@@ -62,7 +62,7 @@ export function Hero() {
             className="group inline-flex items-center gap-3 bg-accent text-accent-foreground pl-7 pr-2 py-2 rounded-full font-medium hover:scale-[1.03] transition-transform"
           >
             Plan my journey
-            <span className="grid place-items-center w-11 h-11 rounded-full bg-primary text-primary-foreground group-hover:rotate-45 transition-transform">
+            <span className="grid place-items-center w-11 h-11 rounded-full bg-primary text-primary-foreground group-hover:-rotate-45 transition-transform">
               →
             </span>
           </Link>
