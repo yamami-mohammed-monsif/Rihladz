@@ -34,14 +34,6 @@ export function Hero() {
       </div>
 
       <div className="mx-auto max-w-7xl px-6 lg:px-10 pt-40 pb-20 relative">
-        {/* Badge */}
-        {/* <div className="flex justify-center">
-          <span className="hero-entrance-badge inline-flex items-center gap-2 bg-background/60 backdrop-blur-md border border-white/40 px-4 py-2 rounded-full text-sm text-primary">
-            <span className="w-1.5 h-1.5 bg-accent rounded-full animate-pulse" />
-            Discover the heart of Algeria
-          </span>
-        </div> */}
-
         {/* Title */}
         <h1 className="hero-entrance-title mt-8 text-center font-display text-[clamp(2.75rem,7vw,6rem)] leading-[0.95] text-primary-foreground drop-shadow-[0_4px_30px_rgba(0,0,0,0.35)]">
           Where the Sahara
@@ -68,12 +60,6 @@ export function Hero() {
               →
             </span>
           </Link>
-          {/* <Link
-            href="/about"
-            className="text-primary-foreground hover:text-accent transition-colors px-4 py-3 underline-offset-8 hover:underline"
-          >
-            How we travel
-          </Link> */}
         </div>
 
         {/* Trust signals bar */}

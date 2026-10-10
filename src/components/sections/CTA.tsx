@@ -19,9 +19,6 @@ export function CTA() {
             />
             <div className="absolute inset-0 bg-linear-to-r from-primary via-primary/80 to-primary/30" />
             <div className="relative px-8 md:px-16 py-20 md:py-28 max-w-3xl">
-              <span className="inline-block bg-accent/20 text-secondary border border-accent/30 px-4 py-1.5 rounded-full text-xs uppercase tracking-widest">
-                Limited departures · 2026
-              </span>
               <h2 className="mt-5 font-display text-5xl md:text-7xl text-primary-foreground text-balance">
                 Your Algeria
                 <br />

@@ -83,9 +83,6 @@ export function Destinations() {
           <div className="lg:col-span-3 space-y-12">
             <Reveal>
               <div>
-                <span className="inline-block bg-secondary text-secondary-foreground px-4 py-1.5 rounded-full text-xs uppercase tracking-widest">
-                  Destinations
-                </span>
                 <h2 className="mt-5 font-display text-5xl text-balance">
                   Destinations
                   <br />
