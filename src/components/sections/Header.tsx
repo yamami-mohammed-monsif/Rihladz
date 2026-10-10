@@ -85,7 +85,7 @@ export function Header() {
                 className={`px-5 py-2 rounded-full text-sm font-medium transition-colors ${
                   active
                     ? "bg-primary text-primary-foreground" // Active styles
-                    : "text-primary hover:bg-primary/10" // Inactive styles
+                    : "text-white hover:bg-primary/10" // Inactive styles
                 }`}
               >
                 {l.label}
@@ -98,7 +98,7 @@ export function Header() {
           href="/destinations"
           className="hidden md:inline-flex items-center gap-2 bg-accent text-accent-foreground px-5 py-2.5 rounded-full text-sm font-medium hover:bg-accent/90 transition-all hover:scale-[1.03]"
         >
-          Book a journey
+          Explore Journeys Now
           <span className="grid place-items-center w-7 h-7 rounded-full bg-primary-foreground/20">
             →
           </span>

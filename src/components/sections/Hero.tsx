@@ -28,7 +28,9 @@ export function Hero() {
           sizes="100vw"
           className="hero-entrance-bg w-full h-[120%] object-cover"
         />
-        <div className="absolute inset-0 bg-linear-to-b from-primary/40 via-primary/20 to-background" />
+        {/* <div className="absolute inset-0 bg-primary/25" /> */}
+        <div className="absolute inset-0 bg-linear-to-b from-primary/55 via-primary/25 to-primary/90" />
+        {/* <div className="absolute inset-0 bg-linear-to-r from-primary/30 via-transparent to-primary/15" />{" "} */}
       </div>
 
       <div className="mx-auto max-w-7xl px-6 lg:px-10 pt-40 pb-20 relative">
@@ -61,7 +63,7 @@ export function Hero() {
             href="/destinations"
             className="group inline-flex items-center gap-3 bg-accent text-accent-foreground pl-7 pr-2 py-2 rounded-full font-medium hover:scale-[1.03] transition-transform"
           >
-            Find my journey
+            Explore Journeys Now
             <span className="grid place-items-center w-11 h-11 rounded-full bg-primary text-primary-foreground group-hover:-rotate-45 transition-transform">
               →
             </span>
