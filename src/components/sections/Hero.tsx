@@ -1,107 +1,89 @@
-"use client";
-
 import hero from "@/public/assets/hero-sahara.webp";
 import Image from "next/image";
 import Link from "next/link";
-import { useEffect, useState } from "react";
-import { Calendar, MapPin, Smile, Award } from "lucide-react";
+import { ArrowRight, Award, MapPin, Users } from "lucide-react";
+
+const proofPoints = [
+  { icon: Award, value: "12+", label: "years of experience" },
+  { icon: Users, value: "3.4k", label: "travelers welcomed" },
+  { icon: MapPin, value: "48", label: "wilayas covered" },
+];
 
 export function Hero() {
-  const [y, setY] = useState(0);
-  useEffect(() => {
-    const onScroll = () => setY(window.scrollY);
-    window.addEventListener("scroll", onScroll, { passive: true });
-    return () => window.removeEventListener("scroll", onScroll);
-  }, []);
-
   return (
-    <section className="relative min-h-svh overflow-hidden">
-      {/* Background with parallax */}
-      <div
-        className="absolute inset-0 -z-10"
-        style={{ transform: `translateY(${y * 0.3}px) scale(1.06)` }}
-      >
+    <section className="relative isolate flex min-h-svh items-center overflow-hidden bg-primary text-primary-foreground">
+      <div className="absolute inset-0 -z-10" aria-hidden="true">
         <Image
           src={hero}
-          alt="Algerian Sahara at sunset"
-          priority
+          alt=""
+          fill
+          preload
           sizes="100vw"
-          className="hero-entrance-bg w-full h-[120%] object-cover"
+          className="hero-entrance-bg object-cover object-center"
         />
-        <div className="absolute inset-0 bg-linear-to-b from-primary/40 via-primary/20 to-background" />
+        <div className="absolute inset-0 bg-primary/25" />
+        <div className="absolute inset-0 bg-linear-to-b from-primary/55 via-primary/25 to-primary/90" />
+        <div className="absolute inset-0 bg-linear-to-r from-primary/30 via-transparent to-primary/15" />
       </div>
 
-      <div className="mx-auto max-w-7xl px-6 lg:px-10 pt-40 pb-20 relative">
-        {/* Badge */}
-        {/* <div className="flex justify-center">
-          <span className="hero-entrance-badge inline-flex items-center gap-2 bg-background/60 backdrop-blur-md border border-white/40 px-4 py-2 rounded-full text-sm text-primary">
-            <span className="w-1.5 h-1.5 bg-accent rounded-full animate-pulse" />
-            Discover the heart of Algeria
-          </span>
-        </div> */}
+      <div className="mx-auto flex w-full max-w-7xl flex-col items-center px-6 pb-9 pt-28 text-center sm:px-8 md:pb-11 lg:px-10">
+        <p className="hero-entrance-badge inline-flex items-center gap-2 rounded-full border border-white/30 bg-primary/40 px-4 py-2 text-[0.68rem] font-semibold uppercase tracking-[0.2em] text-white shadow-sm backdrop-blur-md sm:text-xs">
+          <span className="h-1.5 w-1.5 rounded-full bg-secondary" />
+          Algeria · Locally led journeys
+        </p>
 
-        {/* Title */}
-        <h1 className="hero-entrance-title mt-8 text-center font-display text-[clamp(2.75rem,7vw,6rem)] leading-[0.95] text-primary-foreground drop-shadow-[0_4px_30px_rgba(0,0,0,0.35)]">
+        <h1 className="hero-entrance-title mt-6 max-w-5xl font-display text-[clamp(3.15rem,7.2vw,6.7rem)] leading-[0.91] tracking-[-0.045em] text-balance text-white drop-shadow-[0_3px_28px_rgba(4,16,28,0.38)]">
           Where the Sahara
           <br />
-          <span className="italic font-light text-secondary">
+          <span className="font-light italic text-secondary">
             writes the sky
           </span>
         </h1>
 
-        {/* Subtitle */}
-        <p className="hero-entrance-sub mt-6 max-w-xl mx-auto text-center text-primary-foreground/85 text-lg">
-          Rihla DZ designs slow, locally-rooted journeys across Algeria — from
-          the dunes of Tassili to the white walls of Algiers.
+        <p className="hero-entrance-sub mt-6 max-w-2xl text-base leading-relaxed text-white/95 drop-shadow-[0_2px_12px_rgba(4,16,28,0.45)] sm:text-lg">
+          Locally led journeys through Algeria’s Sahara, coast and heritage
+          cities—thoughtfully paced, with permits and planning handled for you.
         </p>
 
-        {/* CTAs */}
-        <div className="hero-entrance-cta mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
+        <div className="hero-entrance-cta mt-8 flex flex-col items-center gap-3">
           <Link
-            href="/destinations"
-            className="group inline-flex items-center gap-3 bg-accent text-accent-foreground pl-7 pr-2 py-2 rounded-full font-medium hover:scale-[1.03] transition-transform"
+            href="#popular-tours"
+            className="group inline-flex min-h-14 items-center gap-3 rounded-full bg-accent pl-7 pr-2 text-base font-semibold text-accent-foreground shadow-[0_12px_32px_rgba(11,27,42,0.25)] transition duration-200 hover:-translate-y-0.5 hover:bg-accent/95 focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-white/70"
           >
-            Find my journey
-            <span className="grid place-items-center w-11 h-11 rounded-full bg-primary text-primary-foreground group-hover:-rotate-45 transition-transform">
-              →
+            Explore journeys
+            <span className="grid h-10 w-10 place-items-center rounded-full bg-primary text-primary-foreground transition-transform group-hover:translate-x-0.5">
+              <ArrowRight size={18} aria-hidden="true" />
             </span>
           </Link>
-          {/* <Link
-            href="/about"
-            className="text-primary-foreground hover:text-accent transition-colors px-4 py-3 underline-offset-8 hover:underline"
-          >
-            How we travel
-          </Link> */}
+          <p className="text-sm font-medium text-white/90 drop-shadow-[0_2px_10px_rgba(4,16,28,0.45)]">
+            Compare itineraries, trip lengths and starting prices
+          </p>
         </div>
 
-        {/* Trust signals bar */}
-        <div className="hero-entrance-trust mt-16 max-w-4xl mx-auto">
-          <div className="flex flex-wrap items-center justify-center gap-6 md:gap-0 md:divide-x md:divide-primary-foreground/20 bg-primary-foreground/6 backdrop-blur-md border border-primary-foreground/10 rounded-2xl px-8 py-6">
-            {[
-              { icon: Award, value: "12+", label: "Years Experience" },
-              { icon: Calendar, value: "340+", label: "Trips Organized" },
-              { icon: Smile, value: "3,400+", label: "Happy Travelers" },
-              { icon: MapPin, value: "58", label: "Wilayas Covered" },
-            ].map((stat, i) => (
+        <div className="hero-entrance-trust mt-8 w-full max-w-4xl rounded-2xl border border-white/25 bg-primary/75 px-4 py-4 shadow-[0_22px_70px_rgba(5,17,29,0.32)] backdrop-blur-xl sm:px-7 sm:py-5">
+          <dl
+            aria-label="Rihla DZ at a glance"
+            className="grid grid-cols-2 gap-x-3 gap-y-4 md:grid-cols-3 md:gap-0 md:divide-x md:divide-white/20"
+          >
+            {proofPoints.map(({ icon: Icon, value, label }, index) => (
               <div
-                key={stat.label}
-                className={`flex items-center gap-3 px-4 md:px-8 ${i === 0 ? "md:pl-0" : ""} ${i === 3 ? "md:pr-0" : ""}`}
-                style={{ animationDelay: `${1.0 + i * 0.12}s` }}
+                key={label}
+                className={`flex items-center justify-center gap-3 px-2 text-left sm:px-4 md:px-6 ${index === 2 ? "col-span-2 md:col-span-1" : ""}`}
               >
-                <div className="grid place-items-center w-10 h-10 rounded-full bg-accent/15 text-accent shrink-0">
-                  <stat.icon size={18} strokeWidth={2.2} />
-                </div>
-                <div>
-                  <p className="font-display text-xl md:text-2xl text-primary-foreground leading-none">
-                    {stat.value}
-                  </p>
-                  <p className="text-xs text-primary-foreground/60 mt-0.5">
-                    {stat.label}
-                  </p>
+                <span className="grid h-10 w-10 shrink-0 place-items-center rounded-full bg-accent/20 text-secondary sm:h-11 sm:w-11">
+                  <Icon size={19} strokeWidth={2} aria-hidden="true" />
+                </span>
+                <div className="flex flex-col">
+                  <dt className="order-2 mt-1 text-xs leading-tight text-white/85 sm:text-sm">
+                    {label}
+                  </dt>
+                  <dd className="order-1 font-display text-2xl leading-none text-white sm:text-[1.75rem]">
+                    {value}
+                  </dd>
                 </div>
               </div>
             ))}
-          </div>
+          </dl>
         </div>
       </div>
     </section>

@@ -7,7 +7,7 @@ import { Reveal } from "../Reveal";
 export function PopularTours() {
   const tours = packages.slice(0, 3);
   return (
-    <section className="py-28 bg-surface">
+    <section id="popular-tours" className="scroll-mt-24 py-28 bg-surface">
       <div className="mx-auto max-w-7xl px-6 lg:px-10">
         <Reveal>
           <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-14">

@@ -48,6 +48,7 @@ export function Header() {
 
   const showMenu = open || closing;
   const menuAnimClass = closing ? "mobile-menu-exit" : "mobile-menu-enter";
+  const headerUsesSolidSurface = scrolled || pathname !== "/";
 
   // Helper to check if link is active
   const isActive = (href: string) => {
@@ -60,32 +61,36 @@ export function Header() {
   return (
     <header
       className={`fixed top-0 inset-x-0 z-50 transition-all duration-500 ${
-        scrolled
+        headerUsesSolidSurface
           ? "bg-background/85 backdrop-blur-xl border-b border-border"
           : "bg-transparent"
       }`}
     >
       <div className="mx-auto max-w-7xl px-6 lg:px-10 h-20 flex items-center justify-between">
         <Link href="/" className="flex items-center gap-2 group">
-          <span className="grid place-items-center w-9 h-9 rounded-full bg-primary text-primary-foreground font-display text-lg">
+          <span className={`grid place-items-center w-9 h-9 rounded-full font-display text-lg ${headerUsesSolidSurface ? "bg-primary text-primary-foreground" : "bg-primary-foreground text-primary"}`}>
             R
           </span>
-          <span className="font-display text-xl text-primary">
+          <span className={`font-display text-xl ${headerUsesSolidSurface ? "text-primary" : "text-primary-foreground"}`}>
             Rihla <span className="text-accent">DZ</span>
           </span>
         </Link>
 
-        <nav className="hidden md:flex items-center gap-1 bg-primary/5 rounded-full p-1.5 border border-border">
+        <nav className={`hidden md:flex items-center gap-1 rounded-full p-1.5 backdrop-blur-md ${headerUsesSolidSurface ? "bg-primary/5 border border-border" : "bg-white/10 border border-white/30"}`}>
           {links.map((l) => {
             const active = isActive(l.href);
             return (
               <Link
                 key={l.href}
                 href={l.href}
-                className={`px-5 py-2 rounded-full text-sm font-medium transition-colors ${
+                  className={`px-5 py-2 rounded-full text-sm font-medium transition-colors ${
                   active
-                    ? "bg-primary text-primary-foreground" // Active styles
-                    : "text-primary hover:bg-primary/10" // Inactive styles
+                    ? headerUsesSolidSurface
+                      ? "bg-primary text-primary-foreground"
+                      : "bg-primary-foreground text-primary"
+                    : headerUsesSolidSurface
+                      ? "text-primary hover:bg-primary/10"
+                      : "text-primary-foreground hover:bg-white/15"
                 }`}
               >
                 {l.label}
@@ -95,10 +100,10 @@ export function Header() {
         </nav>
 
         <Link
-          href="/destinations"
+          href="/#popular-tours"
           className="hidden md:inline-flex items-center gap-2 bg-accent text-accent-foreground px-5 py-2.5 rounded-full text-sm font-medium hover:bg-accent/90 transition-all hover:scale-[1.03]"
         >
-          Book a journey
+          Explore journeys
           <span className="grid place-items-center w-7 h-7 rounded-full bg-primary-foreground/20">
             →
           </span>
@@ -106,7 +111,7 @@ export function Header() {
 
         <button
           aria-label="Menu"
-          className="md:hidden grid place-items-center w-11 h-11 rounded-full bg-primary text-primary-foreground transition-transform active:scale-95"
+          className={`md:hidden grid place-items-center w-11 h-11 rounded-full transition-transform active:scale-95 ${headerUsesSolidSurface ? "bg-primary text-primary-foreground" : "bg-primary-foreground text-primary"}`}
           onClick={handleToggle}
         >
           {open ? <X size={18} /> : <Menu size={18} />}
@@ -137,11 +142,11 @@ export function Header() {
               );
             })}
             <Link
-              href="/destinations"
+              href="/#popular-tours"
               onClick={handleLinkClick}
               className="mt-2 text-center bg-accent text-accent-foreground px-4 py-3 rounded-xl font-medium mobile-link-5"
             >
-              Book a journey
+              Explore journeys
             </Link>
           </nav>
         </div>
