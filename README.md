@@ -35,6 +35,8 @@ An FAQ section addresses common questions and potential objections before the fi
 
 The page follows a deliberate structure:
 
+(docs/cro-notes.jpg)
+
 **Value proposition → Primary CTA → Trust → Destinations & experiences → Social proof → Objection handling → Final CTA**
 
 The goal was to make the next action obvious while giving visitors enough information and reassurance to make a decision.
