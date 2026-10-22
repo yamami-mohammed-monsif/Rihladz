@@ -7,9 +7,7 @@ A modern travel and tourism website concept for discovering Algeria through cura
 
 ## Overview
 
-Rihla DZ is a personal portfolio project built to explore how a travel brand can present destinations and experiences through a visually immersive, conversion-focused interface.
-
-The project combines modern frontend development with responsive UI design, reusable components, clear calls to action, trust signals, and interactive visual effects.
+Rihla DZ is a portfolio concept showing how I combine frontend development, UI/UX, and CRO methodology. After completing a CRO course, I designed the experience around a hypothetical goal: helping visitors move from discovering a destination to making a qualified travel inquiry. This is a demo project, not a live business experiment; no conversion uplift is claimed.
 
 ## Conversion Strategy
 
@@ -40,6 +38,38 @@ The page follows a deliberate structure:
 **Value proposition → Primary CTA → Trust → Destinations & experiences → Social proof → Objection handling → Final CTA**
 
 The goal was to make the next action obvious while giving visitors enough information and reassurance to make a decision.
+
+## CRO Method & Measurement Plan
+
+CRO is more than adding a prominent button. It means understanding what visitors need, identifying friction in their journey, and using evidence to decide what to improve.
+
+For this concept, I structured the experience to communicate the offer, make destinations easier to explore, address common questions, and guide visitors toward an inquiry. The decisions in the interface are CRO-informed design hypotheses—not validated results.
+
+### How I would approach CRO on a real project
+
+1. **Define the goal:** agree what counts as a valuable conversion, such as a completed, qualified travel inquiry.
+2. **Measure the journey:** configure GA4 and Google Tag Manager to track key actions and establish a baseline.
+3. **Find friction:** review funnel drop-offs and use heatmaps, scroll maps, and session recordings where appropriate to understand how visitors use the site.
+4. **Form a hypothesis:** connect an observed problem to a specific change and a measurable expected outcome.
+5. **Test and learn:** run an A/B test when traffic and tracking support a reliable comparison. Otherwise, use usability feedback and monitored iteration without presenting the result as a controlled experiment.
+6. **Evaluate the outcome:** focus on the agreed conversion metric while monitoring guardrails such as page performance and unwanted drop-offs.
+
+### Example hypothesis for Rihla DZ
+
+**Hypothesis:** Mobile visitors may be more likely to explore a trip when the next step is easy to spot and important decision information is easy to find.
+
+**Possible test:** compare the current journey with a version that makes the destination or tour action clearer and brings relevant practical information closer to the decision point.
+
+**Example events to track:** `hero_cta_click`, `destination_select`, `tour_detail_view`, `faq_expand`, `inquiry_start`, and `inquiry_submit`.
+
+**Primary metric:** completed qualified inquiries per eligible visit.  
+**Supporting metrics:** CTA click-through rate and progression from destination or tour exploration to inquiry.
+
+### Demo-project limitations
+
+GA4/GTM tracking, heatmaps, and conversion experiments are not configured for this portfolio demo, and it has no production conversion data. The events and test above are a proposed measurement plan, not collected results.
+
+Any sample statistics or testimonials shown in a demo should be treated as illustrative unless they are backed by verified business data. They should be replaced with approved real information before a commercial launch.
 
 ## Performance & Technical Optimization
 
@@ -138,19 +168,3 @@ The main goals of the project were to practice:
 - Using optimized images and modern Next.js features
 - Designing clear user journeys and calls to action
 - Combining visual storytelling with practical frontend implementation
-
-## CRO Testing Roadmap
-
-Because this is a portfolio project without production traffic, no conversion uplift is claimed.
-
-If deployed for a real travel business, the next step would be to establish baseline conversion data and test hypotheses such as:
-
-- Hero CTA copy and placement
-- Trust-signal positioning
-- Number and type of CTAs
-- Destination-card engagement
-- FAQ placement
-- Booking-flow friction
-- Mobile vs. desktop conversion behavior
-
-The goal would be to use analytics and controlled experiments to validate which changes actually improve conversion rather than relying solely on design assumptions.
